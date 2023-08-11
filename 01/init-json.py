@@ -1,8 +1,11 @@
+# Importamos el modulo para trabajar con ficheros JSON
 import json
 
+# Leemos y carganos en una varible los datos del fichero json
 with open('config.json') as config_file:
     config = json.load(config_file)
 
+# Leemos la clave de la sección que queremos
 db_host = config['database']['host']
 db_port = config['database']['port']
 db_username = config['database']['username']
